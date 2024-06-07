@@ -52,5 +52,9 @@ saveBtns.on("click", function() {
       $(this).find(".description").val(userInput);
     }
   });
-  
+
   // TODO: Add code to display the current date in the header of the page.
+
+  var currentData = dayjs().format("dddd, MMMM D");
+
+  $("#currentDay").text(currentDate);
