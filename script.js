@@ -41,4 +41,16 @@ saveBtns.on("click", function() {
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
+
+  $(".time-block").each(function() {
+    
+    var timeBlockId = $(this).attr("id");
+
+    var userInput = localStorage.getItem(timeBlockId);
+
+    if (userInput !== null) {
+      $(this).find(".description").val(userInput);
+    }
+  });
+  
   // TODO: Add code to display the current date in the header of the page.
